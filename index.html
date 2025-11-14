@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Notes App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Smart Notes</h1>
+            <div class="controls">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search notes...">
+                </div>
+                <div class="sort-options">
+                    <select id="sortSelect">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                    </select>
+                </div>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="note-form">
+                <h2 id="formTitle">Add New Note</h2>
+                <div class="form-group">
+                    <label for="noteTitle">Title</label>
+                    <input type="text" id="noteTitle" placeholder="Note title">
+                </div>
+                <div class="form-group">
+                    <label for="noteContent">Content</label>
+                    <textarea id="noteContent" placeholder="Write your note here..."></textarea>
+                </div>
+                <div class="note-actions">
+                    <button id="saveNote" class="btn-save">Save Note</button>
+                    <button id="cancelEdit" class="btn-cancel" style="display: none;">Cancel</button>
+                </div>
+                <div class="export-options">
+                    <button id="exportTxt" class="btn-secondary">Export as TXT</button>
+                    <button id="exportJson" class="btn-secondary">Export as JSON</button>
+                </div>
+            </div>
+
+            <div class="notes-container" id="notesContainer">
+                <!-- Notes will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
